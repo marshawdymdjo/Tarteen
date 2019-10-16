@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         val kantin2 = findViewById<View>(R.id.kantin2)
         val kantin3 = findViewById<View>(R.id.kantin3)
 
+        setKantinDescription(kantin1,"Bakso Kuah", "Bakso kuah terenak se-TarQ 1 (karena emang cuma satu hehe)")
+        setKantinDescription(kantin2,"Tante Geprek", "Pilihan terbaik kalo lagi pengen makanan rumahan kaya masakan emak")
+        setKantinDescription(kantin3,"Ci Lilis", "Makanan enak buat kalian semua yang lagi banyak duid")
         kantin1.setOnClickListener {
             val intent = Intent(this, KantinActivity::class.java)
             startActivity(intent)
@@ -35,6 +39,15 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+    fun setKantinDescription(view: View, namaKantin: String, descKantin: String) {
+        val titleKantin = view. findViewById<TextView>(R.id.nama_kantin)
+        val deskripsiKantin = view. findViewById<TextView>(R.id.deskripsi_kantin)
+
+        titleKantin.text = namaKantin
+        deskripsiKantin.text = descKantin
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_transaction, menu)

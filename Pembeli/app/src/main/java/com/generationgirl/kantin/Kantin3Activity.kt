@@ -8,7 +8,7 @@ class Kantin3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu);
-        setTitle("Makanan Ci Lilis")
+        setTitle("Ci Lilis")
 
         supportActionBar?. setDisplayHomeAsUpEnabled(true)
         supportActionBar?. setDisplayShowHomeEnabled(true)
