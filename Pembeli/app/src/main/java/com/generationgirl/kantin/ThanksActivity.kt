@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class ThanksActivity : AppCompatActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R. layout. activity_text)
+        setContentView(R. layout. activity_thanks)
         val btnPesanan= findViewById<Button>(R.id. btn_pesanan)
         btnPesanan. setOnClickListener {
             val intent= Intent(this, PesananActivity::class.java)

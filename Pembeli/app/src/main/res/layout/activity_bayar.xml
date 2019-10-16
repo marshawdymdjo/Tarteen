@@ -7,38 +7,33 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-    android:text="Pesanan"
-    />
+            android:text="Pesanan"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Makanan"
-    />
+            android:text="Makanan"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Harga"
-    />
+            android:text="Harga"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total"
-    />
+            android:text="Total"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rp. 10.000"
-    />
+            android:text="Rp. 10.000"/>
 
     <Button
             android:id="@+id/btn_bayar"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:text="Pay with Gopay"
-    />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay with Gopay"/>
 
 
 </LinearLayout>

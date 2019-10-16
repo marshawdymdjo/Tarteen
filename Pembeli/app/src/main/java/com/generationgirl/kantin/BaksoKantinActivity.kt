@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.item_menu.*
 
-class KantinActivity : AppCompatActivity() {
+class BaksoKantinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_bakso);
@@ -46,11 +46,12 @@ class KantinActivity : AppCompatActivity() {
     }
 
     fun setMenuKantin(view: View, namaMenu: String, hargaMenu: String) {
-    val menu = view. findViewById<TextView>(R.id. nama_menu)
+        val menu = view. findViewById<TextView>(R.id. nama_menu)
         val harga = view. findViewById<TextView>(R.id.harga_menu)
         menu.text = namaMenu
         harga.text = hargaMenu
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
        if (item.itemId == android.R.id.home) {
            this.finish()

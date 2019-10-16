@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".MainActivity" android:orientation="vertical">
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".MainActivity" android:orientation="vertical">
 
-    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
-               android:src="@drawable/banner"
-               android:adjustViewBounds="true"/>
-    <include android:id="@+id/kantin1" layout="@layout/item_kantin"/>
-    <include android:id="@+id/kantin2" layout="@layout/item_kantin"/>
-    <include android:id="@+id/kantin3" layout="@layout/item_kantin"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</LinearLayout>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/banner"
+                   android:adjustViewBounds="true"/>
+
+        <include android:id="@+id/bakso" layout="@layout/item_kantin"/>
+        <include android:id="@+id/tante" layout="@layout/item_kantin"/>
+        <include android:id="@+id/cililis" layout="@layout/item_kantin"/>
+
+    </LinearLayout>
 
 </ScrollView>
