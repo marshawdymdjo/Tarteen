@@ -3,11 +3,28 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content" android:layout_margin="10dp">
-    <ImageView android:id="@+id/gambar_kantin" android:layout_width="100dp" android:layout_height="100dp"
-    android:src="@drawable/kantin"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_margin="16dp">
-        <TextView android:id="@+id/nama_kantin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="kantinku" android:textSize="20sp"/>
-        <TextView android:id="@+id/deskripsi_kantin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="deskripsi" android:textSize="18sp"/>
+
+    <ImageView android:id="@+id/gambar_kantin"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:src="@drawable/kantin"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_margin="16dp">
+
+        <TextView android:id="@+id/nama_kantin"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="kantinku"
+                  android:textSize="20sp"/>
+
+        <TextView android:id="@+id/deskripsi_kantin"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="deskripsi"
+                  android:textSize="18sp"/>
 
     </LinearLayout>
 

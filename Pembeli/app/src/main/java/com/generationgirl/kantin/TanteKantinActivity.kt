@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
-class Kantin2Activity : AppCompatActivity() {
+class TanteKantinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu);
-        setTitle("Tante Geprek")
+        setContentView(R.layout.activity_menu_tante);
+        title = "Tante Geprek"
 
         supportActionBar?. setDisplayHomeAsUpEnabled(true)
         supportActionBar?. setDisplayShowHomeEnabled(true)

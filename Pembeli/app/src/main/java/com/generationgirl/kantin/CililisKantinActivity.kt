@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
-class Kantin3Activity : AppCompatActivity() {
+class CililisKantinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu);
-        setTitle("Ci Lilis")
+        setContentView(R.layout.activity_menu_cililis);
+        title = "Ci Lilis"
 
         supportActionBar?. setDisplayHomeAsUpEnabled(true)
         supportActionBar?. setDisplayShowHomeEnabled(true)

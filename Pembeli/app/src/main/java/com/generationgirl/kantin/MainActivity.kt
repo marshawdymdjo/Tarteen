@@ -14,27 +14,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val kantin1 = findViewById<View>(R.id.kantin1)
-        val kantin2 = findViewById<View>(R.id.kantin2)
-        val kantin3 = findViewById<View>(R.id.kantin3)
+        val bakso = findViewById<View>(R.id.bakso)
+        val tante = findViewById<View>(R.id.tante)
+        val cililis = findViewById<View>(R.id.cililis)
 
-        setKantinDescription(kantin1,"Bakso Kuah", "Bakso kuah terenak se-TarQ 1 (karena emang cuma satu hehe)")
-        setKantinDescription(kantin2,"Tante Geprek", "Pilihan terbaik kalo lagi pengen makanan rumahan kaya masakan emak")
-        setKantinDescription(kantin3,"Ci Lilis", "Makanan enak buat kalian semua yang lagi banyak duid")
-        kantin1.setOnClickListener {
-            val intent = Intent(this, KantinActivity::class.java)
+        setKantinDescription(bakso,"Bakso Kuah", "Bakso kuah terenak se-TarQ 1 (karena emang cuma satu hehe)")
+        setKantinDescription(tante,"Tante Geprek", "Pilihan terbaik kalo lagi pengen makanan rumahan kaya masakan emak")
+        setKantinDescription(cililis,"Ci Lilis", "Makanan enak buat kalian semua yang lagi banyak duid")
+        bakso.setOnClickListener {
+            val intent = Intent(this, BaksoKantinActivity::class.java)
+            startActivity(intent)
+        }
+
+        tante.setOnClickListener {
+            val intent = Intent(this, TanteKantinActivity::class.java)
             startActivity(intent)
 
         }
 
-        kantin2.setOnClickListener {
-            val intent = Intent(this, Kantin2Activity::class.java)
-            startActivity(intent)
-
-        }
-
-        kantin3.setOnClickListener {
-            val intent = Intent(this, Kantin3Activity::class.java)
+        cililis.setOnClickListener {
+            val intent = Intent(this, CililisKantinActivity::class.java)
             startActivity(intent)
 
         }
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId==R.id. id_transaction){
+        if (item.itemId == R.id. id_transaction){
             val intent=Intent(this, PesananActivity::class.java)
             startActivity(intent)
             return true

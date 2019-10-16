@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".KantinActivity"/>
-        <activity android:name=".Kantin2Activity"/>
-        <activity android:name=".Kantin3Activity"/>
+        <activity android:name=".BaksoKantinActivity"/>
+        <activity android:name=".TanteKantinActivity"/>
+        <activity android:name=".CililisKantinActivity"/>
         <activity android:name=".BayarActivity"/>
         <activity android:name=".ThanksActivity"/>
         <activity android:name=".PesananActivity"/>

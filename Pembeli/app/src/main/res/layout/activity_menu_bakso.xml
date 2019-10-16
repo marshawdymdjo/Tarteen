@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-        <ImageView android:layout_width="match_parent" android:layout_height="300dp"
-                   android:adjustViewBounds="true"
-                   android:src="@drawable/kantin"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:text="kantin_1"
-                  android:gravity="center"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <include android:id="@+id/menu_1" layout="@layout/item_menu"/>
-        <include android:id="@+id/menu_2" layout="@layout/item_menu"/>
-        <include android:id="@+id/menu_3" layout="@layout/item_menu"/>
-        <include android:id="@+id/menu_4" layout="@layout/item_menu"/>
-        <include android:id="@+id/menu_5" layout="@layout/item_menu"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="100dp">
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:adjustViewBounds="true"
+                       android:src="@drawable/kantin"/>
+
+            <include android:id="@+id/menu_1" layout="@layout/item_menu"/>
+            <include android:id="@+id/menu_2" layout="@layout/item_menu"/>
+            <include android:id="@+id/menu_3" layout="@layout/item_menu"/>
+            <include android:id="@+id/menu_4" layout="@layout/item_menu"/>
+            <include android:id="@+id/menu_5" layout="@layout/item_menu"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/layout_bayar"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/total"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Total: Rp 0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/btn_bayar"
+                android:text="Bayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>
