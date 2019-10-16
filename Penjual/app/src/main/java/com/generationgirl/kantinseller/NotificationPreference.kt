@@ -7,9 +7,6 @@ import com.google.gson.Gson
 import java.security.AccessControlContext
 import kotlin.random.Random
 
-/**
- * @author by milhamj on 2019-10-16.
- */
 class NotificationPreference(context: Context) {
 
     companion object {

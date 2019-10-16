@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * @author by milhamj on 2019-10-16.
- */
 class NotificationAdapter : RecyclerView.Adapter<NotificationAdapter.ViewHolder>(){
 
     private val list: MutableList<NotificationData> = arrayListOf()
