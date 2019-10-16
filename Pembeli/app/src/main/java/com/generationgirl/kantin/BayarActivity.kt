@@ -3,13 +3,17 @@ package com.generationgirl.kantin
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.generationgirl.kantin.model.Makanan
 
 class BayarActivity : AppCompatActivity () {
 
-    private var daftarPesanan: ArrayList<Makanan>? = ArrayList()
+    private var daftarPesanan: ArrayList<Makanan> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +25,33 @@ class BayarActivity : AppCompatActivity () {
 
         daftarPesanan = intent.getParcelableArrayListExtra("daftarpesanan")
 
+        var totalHarga = 0
+
+        val layoutDaftarPesanan = findViewById<LinearLayout>(R.id.daftar_pesanan)
+        daftarPesanan.forEachIndexed{ index, makanan ->
+            generatePesanan(layoutDaftarPesanan, makanan, index+1)
+            totalHarga += makanan.harga?.toIntOrNull()?:0
+        }
+
+        val total = findViewById<TextView>(R.id.total)
+        total.text = "Total Rp $totalHarga"
+
         val btnBayar = findViewById<Button>(R.id.btn_bayar)
         btnBayar. setOnClickListener {
             val intent = Intent(this, ThanksActivity::class.java)
             startActivity(intent)
         }
+    }
 
+    private fun generatePesanan(container: ViewGroup, makanan: Makanan, count: Int) {
+        val parentView = layoutInflater.inflate(R.layout.item_pesanan, null)
+        val namaMakanan = parentView.findViewById<TextView>(R.id.nama_makanan)
+        val hargaMakanan = parentView.findViewById<TextView>(R.id.harga_makanan)
+
+        namaMakanan.text = "$count. ${makanan.namaMakanan}"
+        hargaMakanan.text = makanan.harga
+
+        container.addView(parentView)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
