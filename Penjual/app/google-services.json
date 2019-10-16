@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "841473068518",
+    "firebase_url": "https://tarteen-76688.firebaseio.com",
+    "project_id": "tarteen-76688",
+    "storage_bucket": "tarteen-76688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841473068518:android:940ae087c80314c8d9da27",
+        "android_client_info": {
+          "package_name": "com.generationgirl.kantinseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841473068518-c7tqg61amqi8hde93a15db4gspctgs7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYD9WtKg6b9LXw3UA38H5Du_TlW49UjUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841473068518-c7tqg61amqi8hde93a15db4gspctgs7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
