@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 class CililisKantinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu_tante);
-        setTitle("Ci Lilis")
+        setContentView(R.layout.activity_menu_cililis);
+        title = "Ci Lilis"
 
         supportActionBar?. setDisplayHomeAsUpEnabled(true)
         supportActionBar?. setDisplayShowHomeEnabled(true)
