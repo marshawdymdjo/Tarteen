@@ -23,6 +23,7 @@ class NotificationPreference(context: Context) {
             val data: NotificationData = gson.fromJson(entry.value.toString(), NotificationData::class.java)
             list.add(data)
         }
+        list.sortByDescending { it.time }
         return list
     }
 
