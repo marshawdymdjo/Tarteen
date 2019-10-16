@@ -16,9 +16,13 @@ class MainActivity : AppCompatActivity() {
 
         notificationPreference = NotificationPreference(this)
         adapter = NotificationAdapter()
-        adapter.setList(notificationPreference.getAllData())
 
         listRv = findViewById(R.id.listRv)
         listRv.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        adapter.setList(notificationPreference.getAllData())
     }
 }
