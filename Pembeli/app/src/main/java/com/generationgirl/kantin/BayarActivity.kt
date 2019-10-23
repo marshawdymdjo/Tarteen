@@ -39,7 +39,6 @@ class BayarActivity : AppCompatActivity () {
 
         val btnBayar = findViewById<Button>(R.id.btn_bayar)
         btnBayar. setOnClickListener {
-            // TODO save to shared preferences
             val pesanan = Pesanan()
             pesanan.kode = CodeGenerator().generate()
             pesanan.total = totalHarga.toString()

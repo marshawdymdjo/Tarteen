@@ -20,6 +20,7 @@ class ThanksActivity : AppCompatActivity () {
             val intent = Intent(this, PesananActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
+            this.finish()
         }
 
         val kode = intent.getStringExtra("kode")
