@@ -3,12 +3,12 @@ package com.generationgirl.kantin.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Makanan(val namaMakanan: String? = "", val harga: String? = "") : Parcelable {
+data class Makanan(var namaMakanan: String? = "",
+                   var harga: String? = "") : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(namaMakanan)

@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.generationgirl.kantin.model.Makanan
+import com.generationgirl.kantin.model.Pesanan
 
 class BayarActivity : AppCompatActivity () {
 
@@ -38,7 +39,15 @@ class BayarActivity : AppCompatActivity () {
 
         val btnBayar = findViewById<Button>(R.id.btn_bayar)
         btnBayar. setOnClickListener {
+            // TODO save to shared preferences
+            val pesanan = Pesanan()
+            pesanan.kode = CodeGenerator().generate()
+            pesanan.total = totalHarga.toString()
+            pesanan.daftarMakanan = daftarPesanan
+            SharedPreferences(this).simpanPesanan(pesanan)
+
             val intent = Intent(this, ThanksActivity::class.java)
+            intent.putExtra("kode", pesanan.kode)
             startActivity(intent)
         }
     }

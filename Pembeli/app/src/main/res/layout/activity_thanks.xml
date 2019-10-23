@@ -2,14 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-android:text="Terimakasih! Ditunggu ya!"
-/>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:text="ABA23"/>
+              android:layout_height="match_parent"
+              android:layout_margin="16dp">
 
-    <Button android:id="@+id/btn_pesanan" android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:text="Lihat Pesanan"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="18sp"
+              android:text="Terima kasih telah menggunakan Tarteen, Mohon menunggu hingga jam istirahat makan siang sampai pesananmu sudah siap untuk diambil."/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:textSize="18sp"
+              android:text="Kode Makanan ini digunakan untuk menukar pesananmu ya."/>
+
+    <TextView
+            android:id="@+id/kode_makanan"
+            android:layout_marginTop="4dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABA23"/>
+
+        <Button android:id="@+id/btn_pesanan"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lihat Daftar Pesanan"/>
 
 </LinearLayout>

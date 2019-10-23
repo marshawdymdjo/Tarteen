@@ -4,9 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ThanksActivity : AppCompatActivity () {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thanks)
@@ -18,6 +21,11 @@ class ThanksActivity : AppCompatActivity () {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
         }
+
+        val kode = intent.getStringExtra("kode")
+
+        val kodeMakanan = findViewById<TextView>(R.id.kode_makanan)
+        kodeMakanan.text = kode
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
